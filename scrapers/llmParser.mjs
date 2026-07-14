@@ -1,5 +1,5 @@
 import * as chrono from 'chrono-node';
-import { callKimi, extractJsonFromOutput } from './kimiCli.mjs';
+import { callKimi, extractJsonFromOutput } from './kimiApi.mjs';
 
 const Academic = {
     name: "string (no titles like Dr. or Prof.)",
