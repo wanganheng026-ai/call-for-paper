@@ -2,6 +2,7 @@ import { promises as fs } from 'fs';
 
 import { parse } from './llmParser.mjs'
 import { clean } from './dataPreparation.mjs';
+import { rate } from './rating.mjs';
 
 export async function integrateCalls(newCalls) {
     const now = new Date();
@@ -26,6 +27,7 @@ export async function integrateCalls(newCalls) {
         } else {
             // Enrich call with unstructured data parsing
             newCall = await parse(newCall);
+            newCall = await rate(newCall);
             
             if (oldSlugMap.has(newCall.slug)) {
                 // If slug exists but hash is different, update the existing call

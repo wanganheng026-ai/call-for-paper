@@ -1,0 +1,13 @@
+{
+  "domain": "digital technologies or AI in healthcare",
+  "focus": "paradox analysis and management strategies",
+  "methodology": "qualitative research",
+  "description": "Researcher studying paradoxes arising from the implementation of digital technologies and AI in healthcare settings, with a focus on management strategies to navigate these paradoxes. Employs qualitative research methods.",
+  "rating_rules": {
+    "🟢🟢🟢": "高度相关：直接涉及 healthcare + digital/AI + paradox/management，且明确欢迎质性研究",
+    "🟢🟢": "中度相关：涉及 healthcare + digital/AI，或涉及 paradox/management + 期刊对质性友好",
+    "🟢": "低度相关：涉及 healthcare 或 AI/digital，但需要较强的 reframing 才能适配",
+    "🟡": "可能相关：需要创造性的重新框架才能适配，且期刊可能接受；需在 analysis 中详细说明 reframing 策略",
+    "🔴": "不相关：与 healthcare AI paradox 距离太远，或期刊方法论完全不匹配（如纯数学建模）"
+  }
+}

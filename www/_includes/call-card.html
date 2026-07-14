@@ -1,7 +1,8 @@
 {% set dueDate = call.dates | selectattr("is_full_paper_submission_deadline") | first if call.dates %}
 <div x-show="show_call($el)" data-title="{{ call.title if call.title else call.metaTitle | safe }}"
     data-journal="{{ call.journal | safe }}" data-pubdate="{{ call.pubDate | safe }}"
-    data-duedate="{{ dueDate.date | safe }}" class="card bg-base-200 hover:bg-base-300 border border-neutral">
+    data-duedate="{{ dueDate.date | safe }}" data-rating="{{ call.topic_fits | safe }}"
+    class="card bg-base-200 hover:bg-base-300 border border-neutral">
     <div class="card-body p-4">
         {% if call.title %}
         <a href="{{ ('/call/' + call.slug) | url }}">
@@ -15,6 +16,11 @@
         <a href="{{ '/journal/' + (call.journal | slug) | url }}">
             <p class="uppercase text-xs font-semibold text-gray-600 hover:text-gray-500">{{ call.journal | safe }}</p>
         </a>
+        {% if call.topic_fits %}
+        <div class="mt-2">
+            <span class="badge badge-lg" title="{{ call.analysis | safe }}">{{ call.topic_fits }}</span>
+        </div>
+        {% endif %}
         <div class="tooltip text-left" data-tip="{{ call.pubDate | dateOnly }}">
             <span>
                 <svg class="w-6 inline" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">

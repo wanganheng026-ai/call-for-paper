@@ -3,3 +3,5 @@ public/
 !www/public/
 .vscode/
 .env
+.npm-cache
+output/

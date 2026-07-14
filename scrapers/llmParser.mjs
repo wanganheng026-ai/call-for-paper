@@ -1,37 +1,45 @@
-import OpenAI from 'openai';
-import { zodResponseFormat } from 'openai/helpers/zod';
-import { z } from 'zod';
 import * as chrono from 'chrono-node';
+import { callKimi, extractJsonFromOutput } from './kimiCli.mjs';
 
-const openai = new OpenAI({
-    baseURL: process.env.OPENAI_BASE_URL,
-    apiKey: process.env.OPENAI_API_KEY,
-});
+const Academic = {
+    name: "string (no titles like Dr. or Prof.)",
+    affiliation: "string (university/organization only, nullable)"
+};
 
-const Academic = z.object({
-    name: z.string().describe("The academic's name. Do NOT include titles such as doctor (dr.) or professor (prof.) here."),
-    affiliation: z.string().describe("The academic's university affiliation. Only include the university or organization here. Do NOT include departments, cities, states or countries.").nullable(),
-});
+const DateSchema = {
+    date: "string (the submission timeline event date)",
+    description: "string (description of the event, nullable)",
+    is_full_paper_submission_deadline: "boolean (true if this is the full paper submission deadline)"
+};
 
-const Date = z.object({
-    date: z.string().describe("The date of the submission timeline event"),
-    description: z.string().describe("The description of the submission timeline event").nullable(),
-    is_full_paper_submission_deadline: z.boolean().describe("A flag that indicates whether the date is the full paper submission deadline. The most important date on a call for papers.").nullable(),
-});
+const CallSchema = {
+    title: "string (actual title only, no 'Call for Papers' or journal name)",
+    topics: "array of strings (bullet point topics or example research questions)",
+    description: { paragraphs: "array of strings (main content paragraphs only)" },
+    tags: "array of strings (as few tags as possible, lowercase)",
+    editors: "array of " + JSON.stringify(Academic),
+    associate_editors: "array of " + JSON.stringify(Academic),
+    dates: "array of " + JSON.stringify(DateSchema)
+};
 
-const Description = z.object({
-    paragraphs: z.string().array().describe("The paragraphs of the description. This is the main content of the call for papers. Do NOT include headings as paragraphs. Do NOT include topics that appear in bullet point format. Do NOT include information related to formatting and submission instructions. If there is no paragraph structure in the text provided, you can organize the text into meaningful paragraphs."),
-});
+function buildPrompt(rawContent) {
+    return `You are an expert parser of calls for papers for special issues of academic journals. You do NOT make up any information. You only copy information from the call directly.
 
-const Call = z.object({
-    title: z.string().describe("Title of the call for papers. Only include the actual title here. Do NOT include statements such as 'call for papers' or 'special issue' or the journal name here."),
-    topics: z.string().array().describe("Topics of the call for papers. This is a list of topics that the call for papers is interested in. This is usually in bullet point format. Bullet points can also include example research questions."),
-    description: Description.describe("Description of the call for papers. This is the main content of the call for papers."),
-    tags: z.string().array().describe("Tags that describe the content of the call for papers. Use as few tags as possible."),
-    editors: Academic.array().describe("The editors of the special issue. This is a list of academics who are responsible for the special issue."),
-    associate_editors: Academic.array().describe("The associate editors or editorial review board of the special issue. This is a list of academics who are assisting the editors with the special issue."),
-    dates: Date.array().describe("This is a list of important dates for the call for papers."),
-});
+Parse the following call for papers and return a single valid JSON object matching this schema:
+
+${JSON.stringify(CallSchema, null, 2)}
+
+Rules:
+1. Return ONLY the JSON object, no markdown, no explanation before or after.
+2. Do NOT include headings as paragraphs.
+3. Do NOT include formatting/submission instructions.
+4. Topics are usually in bullet point format.
+5. If there is no paragraph structure, organize the text into meaningful paragraphs.
+
+Call for papers content:
+${rawContent}
+`;
+}
 
 async function parseFuzzyDate(fuzzyDate) {
     return chrono.parseDate(fuzzyDate);
@@ -43,24 +51,32 @@ export async function parse(call) {
         call.tags = [];
         return call;
     }
-    const completion = await openai.beta.chat.completions.parse({
-        model: "openai/gpt-4o-mini",
-        messages: [
-            { role: "system", content: "You are an expert parser of calls for papers for special issues of academic journals. You do NOT make up any information. You only copy information from the call directly." },
-            { role: "user", content: `Parse the following call for papers:\n\n${call.rawContent}` },
-        ],
-        response_format: zodResponseFormat(Call, "call_parsing"),
-    });
 
-    call = { ...call, ...completion.choices[0].message.parsed };
-    delete call.rawContent
-    call.dates = await Promise.all(call.dates.map(async date => {
-        date.date = await parseFuzzyDate(date.date);
-        return date;
-    }));
-    call.dates.sort((a, b) => a.date - b.date);
-    call.tags = await Promise.all(call.tags.map(async tag => {
-        return tag.toLowerCase();
-    }));
+    const prompt = buildPrompt(call.rawContent);
+    const output = await callKimi(prompt, 300000);
+    const parsed = extractJsonFromOutput(output, false);
+
+    if (!parsed) {
+        console.warn(`Could not parse LLM output for ${call.slug || call.metaTitle}. Output length: ${output.length}`);
+        call.tags = [];
+        delete call.rawContent;
+        return call;
+    }
+
+    call = { ...call, ...parsed };
+    delete call.rawContent;
+
+    if (call.dates && Array.isArray(call.dates)) {
+        call.dates = await Promise.all(call.dates.map(async date => {
+            date.date = await parseFuzzyDate(date.date);
+            return date;
+        }));
+        call.dates.sort((a, b) => new Date(a.date) - new Date(b.date));
+    }
+
+    if (call.tags && Array.isArray(call.tags)) {
+        call.tags = call.tags.map(tag => tag.toLowerCase());
+    }
+
     return call;
 }
