@@ -1,51 +1,274 @@
 [
-  {"publisher": "AIS", "field": "INFO MAN", "title": "Journal of the Association for Information Systems", "abbreviation": "jais", "ajg": "4*", "url": "https://aisel.aisnet.org/jais/"},
-  {"publisher": "Elsevier", "field": "INFO MAN", "title": "Decision Support Systems", "abbreviation": "dss", "ajg": "3", "url": "https://www.sciencedirect.com/journal/decision-support-systems/about/call-for-papers"},
-  {"publisher": "Elsevier", "field": "INFO MAN", "title": "Government Information Quarterly", "abbreviation": "giq", "ajg": "3", "url": "https://www.sciencedirect.com/journal/government-information-quarterly/about/call-for-papers"},
-  {"publisher": "Elsevier", "field": "INFO MAN", "title": "Information and Management", "abbreviation": "im", "ajg": "3", "url": "https://www.sciencedirect.com/journal/information-and-management/about/call-for-papers"},
-  {"publisher": "Elsevier", "field": "INFO MAN", "title": "Information and Organization", "abbreviation": "io", "ajg": "3", "url": "https://www.sciencedirect.com/journal/information-and-organization/about/call-for-papers"},
-  {"publisher": "Elsevier", "field": "INFO MAN", "title": "International Journal of Information Management", "abbreviation": "ijim", "ajg": "3", "url": "https://www.sciencedirect.com/journal/international-journal-of-information-management/about/call-for-papers"},
-  {"publisher": "Elsevier", "field": "INFO MAN", "title": "Journal of Strategic Information Systems", "abbreviation": "jsis", "ajg": "4", "url": "https://www.sciencedirect.com/journal/the-journal-of-strategic-information-systems/about/call-for-papers"},
-  {"publisher": "Elsevier", "field": "OPS&TECH", "title": "Computers in Industry", "abbreviation": "cii", "ajg": "3", "url": "https://www.sciencedirect.com/journal/computers-in-industry/about/call-for-papers"},
-  {"publisher": "Elsevier", "field": "OPS&TECH", "title": "International Journal of Production Economics", "abbreviation": "ijpe", "ajg": "3", "url": "https://www.sciencedirect.com/journal/international-journal-of-production-economics/about/call-for-papers"},
-  {"publisher": "Elsevier", "field": "OPS&TECH", "title": "Journal of Purchasing and Supply Management", "abbreviation": "jpsm", "ajg": "3", "url": "https://www.sciencedirect.com/journal/journal-of-purchasing-and-supply-management/about/call-for-papers"},
-  {"publisher": "Elsevier", "field": "OR&MANSCI", "title": "European Journal of Operational Research", "abbreviation": "ejor", "ajg": "4", "url": "https://www.sciencedirect.com/journal/european-journal-of-operational-research/about/call-for-papers"},
-  {"publisher": "Elsevier", "field": "ORG STUD", "title": "Organizational Dynamics", "abbreviation": "orgdyn", "ajg": "3", "url": "https://www.sciencedirect.com/journal/organizational-dynamics/about/call-for-papers"},
-  {"publisher": "Elsevier", "field": "ORG STUD", "title": "Research in Organizational Behavior", "abbreviation": "riob", "ajg": "3", "url": "https://www.sciencedirect.com/journal/research-in-organizational-behavior/about/call-for-papers"},
-  {"publisher": "Elsevier", "field": "ORG STUD", "title": "Leadership Quarterly", "abbreviation": "leaqua", "ajg": "4", "url": "https://www.sciencedirect.com/journal/leadership-quarterly/about/call-for-papers"},
-  {"publisher": "Emerald", "field": "INFO MAN", "title": "Information Technology and People", "abbreviation": "itp", "ajg": "3", "url": "https://www.emeraldgrouppublishing.com/journal/itp"},
-  {"publisher": "Emerald", "field": "INFO MAN", "title": "Internet Research", "abbreviation": "intr", "ajg": "3", "url": "https://www.emeraldgrouppublishing.com/journal/intr"},
-  {"publisher": "Emerald", "field": "OPS&TECH", "title": "Supply Chain Management: An International Journal", "abbreviation": "scm", "ajg": "3", "url": "https://www.emeraldgrouppublishing.com/journal/scm"},
-  {"publisher": "Emerald", "field": "OPS&TECH", "title": "International Journal of Operations and Production Management", "abbreviation": "ijopm", "ajg": "4", "url": "https://www.emeraldgrouppublishing.com/journal/ijopm"},
-  {"publisher": "Emerald", "field": "ORG STUD", "title": "Research in the Sociology of Organizations", "abbreviation": "rso", "ajg": "3", "url": "https://www.emeraldgrouppublishing.com/journal/rso"},
-  {"publisher": "IEEE", "field": "OPS&TECH", "title": "IEEE Transactions on Engineering Management", "abbreviation": "tems", "ajg": "3", "url": "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=17"},
-  {"publisher": "INFORMS", "field": "INFO MAN", "title": "Information Systems Research", "abbreviation": "isr", "ajg": "4*", "url": "https://pubsonline.informs.org/page/calls-for-papers"},
-  {"publisher": "INFORMS", "field": "OPS&TECH", "title": "Manufacturing and Service Operations Management", "abbreviation": "msom", "ajg": "3", "url": "https://pubsonline.informs.org/page/calls-for-papers"},
-  {"publisher": "INFORMS", "field": "OR&MANSCI", "title": "Management Science", "abbreviation": "mnsc", "ajg": "4*", "url": "https://pubsonline.informs.org/page/calls-for-papers"},
-  {"publisher": "INFORMS", "field": "ORG STUD", "title": "Organization Science", "abbreviation": "orsc", "ajg": "4*", "url": "https://pubsonline.informs.org/page/calls-for-papers"},
-  {"publisher": "MISRC / Univ. of Minnesota", "field": "INFO MAN", "title": "MIS Quarterly", "abbreviation": "misq", "ajg": "4*", "url": "https://misq.umn.edu/call-for-papers/"},
-  {"publisher": "Oxford University Press", "field": "INFO MAN", "title": "Journal of Computer-Mediated Communication", "abbreviation": "jcmc", "ajg": "3", "url": "https://academic.oup.com/jcmc/pages/call_for_papers"},
-  {"publisher": "Sage", "field": "INFO MAN", "title": "Journal of Information Technology", "abbreviation": "jit", "ajg": "4", "url": "https://journals.sagepub.com/home/jin"},
-  {"publisher": "Sage", "field": "ORG STUD", "title": "Group and Organization Management", "abbreviation": "gom", "ajg": "3", "url": "https://journals.sagepub.com/home/gom"},
-  {"publisher": "Sage", "field": "ORG STUD", "title": "Organization", "abbreviation": "org", "ajg": "3", "url": "https://journals.sagepub.com/home/org"},
-  {"publisher": "Sage", "field": "ORG STUD", "title": "Organization and Environment", "abbreviation": "oae", "ajg": "3", "url": "https://journals.sagepub.com/home/oae"},
-  {"publisher": "Sage", "field": "ORG STUD", "title": "Human Relations", "abbreviation": "hum", "ajg": "4", "url": "https://journals.sagepub.com/home/hum"},
-  {"publisher": "Sage", "field": "ORG STUD", "title": "Organization Studies", "abbreviation": "oss", "ajg": "4", "url": "https://journals.sagepub.com/home/oss"},
-  {"publisher": "Sage", "field": "ORG STUD", "title": "Organizational Research Methods", "abbreviation": "orm", "ajg": "4", "url": "https://journals.sagepub.com/home/orm"},
-  {"publisher": "Springer", "field": "INFO MAN", "title": "Information Systems Frontiers", "abbreviation": "isfr", "ajg": "3", "url": "https://link.springer.com/journal/10796"},
-  {"publisher": "Springer", "field": "OR&MANSCI", "title": "Annals of Operations Research", "abbreviation": "anor", "ajg": "3", "url": "https://link.springer.com/journal/10479"},
-  {"publisher": "Taylor & Francis", "field": "INFO MAN", "title": "Information Society", "abbreviation": "tis", "ajg": "3", "url": "https://www.tandfonline.com/journals/utis20"},
-  {"publisher": "Taylor & Francis", "field": "INFO MAN", "title": "International Journal of Electronic Commerce", "abbreviation": "ijec", "ajg": "3", "url": "https://www.tandfonline.com/journals/ujec20"},
-  {"publisher": "Taylor & Francis", "field": "INFO MAN", "title": "European Journal of Information Systems", "abbreviation": "ejis", "ajg": "4", "url": "https://www.tandfonline.com/journals/tjis20"},
-  {"publisher": "Taylor & Francis", "field": "INFO MAN", "title": "Journal of Management Information Systems", "abbreviation": "jmis", "ajg": "4", "url": "https://www.tandfonline.com/journals/mmis20"},
-  {"publisher": "Taylor & Francis", "field": "OPS&TECH", "title": "International Journal of Production Research", "abbreviation": "ijpr", "ajg": "3", "url": "https://www.tandfonline.com/journals/tprs20"},
-  {"publisher": "Taylor & Francis", "field": "OPS&TECH", "title": "Production Planning and Control", "abbreviation": "ppc", "ajg": "3", "url": "https://www.tandfonline.com/journals/tppc20"},
-  {"publisher": "Taylor & Francis", "field": "OR&MANSCI", "title": "Journal of the Operational Research Society", "abbreviation": "jors", "ajg": "3", "url": "https://www.tandfonline.com/journals/tjor20"},
-  {"publisher": "Wiley", "field": "INFO MAN", "title": "Journal of the Association for Information Science and Technology", "abbreviation": "jasist", "ajg": "3", "url": "https://asistdl.onlinelibrary.wiley.com/journal/23301643"},
-  {"publisher": "Wiley", "field": "INFO MAN", "title": "Information Systems Journal", "abbreviation": "isj", "ajg": "4", "url": "https://onlinelibrary.wiley.com/page/journal/13652575/homepage/special_issues.htm"},
-  {"publisher": "Wiley", "field": "OPS&TECH", "title": "Journal of Business Logistics", "abbreviation": "jbl", "ajg": "3", "url": "https://onlinelibrary.wiley.com/journal/jbl/homepage/specialissues"},
-  {"publisher": "Wiley", "field": "OPS&TECH", "title": "Journal of Supply Chain Management", "abbreviation": "jscm", "ajg": "4", "url": "https://onlinelibrary.wiley.com/journal/sscm/homepage/specialissues"},
-  {"publisher": "Wiley", "field": "OPS&TECH", "title": "Production and Operations Management", "abbreviation": "pom", "ajg": "4", "url": "https://onlinelibrary.wiley.com/journal/poms/homepage/specialissues"},
-  {"publisher": "Wiley", "field": "OPS&TECH", "title": "Journal of Operations Management", "abbreviation": "jom", "ajg": "4*", "url": "https://onlinelibrary.wiley.com/journal/jom/homepage/specialissues"},
-  {"publisher": "Wiley", "field": "OR&MANSCI", "title": "Decision Sciences", "abbreviation": "deci", "ajg": "3", "url": "https://onlinelibrary.wiley.com/journal/deci/homepage/specialissues"}
+  {
+    "publisher": "AIS",
+    "field": "INFO MAN",
+    "title": "Journal of the Association for Information Systems",
+    "abbreviation": "jais",
+    "ajg": "4*",
+    "url": "https://aisel.aisnet.org/jais/"
+  },
+  {
+    "publisher": "Elsevier",
+    "field": "INFO MAN",
+    "title": "Government Information Quarterly",
+    "abbreviation": "giq",
+    "ajg": "3",
+    "url": "https://www.sciencedirect.com/journal/government-information-quarterly/about/call-for-papers"
+  },
+  {
+    "publisher": "Elsevier",
+    "field": "INFO MAN",
+    "title": "Information and Management",
+    "abbreviation": "im",
+    "ajg": "3",
+    "url": "https://www.sciencedirect.com/journal/information-and-management/about/call-for-papers"
+  },
+  {
+    "publisher": "Elsevier",
+    "field": "INFO MAN",
+    "title": "Information and Organization",
+    "abbreviation": "io",
+    "ajg": "3",
+    "url": "https://www.sciencedirect.com/journal/information-and-organization/about/call-for-papers"
+  },
+  {
+    "publisher": "Elsevier",
+    "field": "INFO MAN",
+    "title": "International Journal of Information Management",
+    "abbreviation": "ijim",
+    "ajg": "3",
+    "url": "https://www.sciencedirect.com/journal/international-journal-of-information-management/about/call-for-papers"
+  },
+  {
+    "publisher": "Elsevier",
+    "field": "INFO MAN",
+    "title": "Journal of Strategic Information Systems",
+    "abbreviation": "jsis",
+    "ajg": "4",
+    "url": "https://www.sciencedirect.com/journal/the-journal-of-strategic-information-systems/about/call-for-papers"
+  },
+  {
+    "publisher": "Elsevier",
+    "field": "OPS&TECH",
+    "title": "Journal of Purchasing and Supply Management",
+    "abbreviation": "jpsm",
+    "ajg": "3",
+    "url": "https://www.sciencedirect.com/journal/journal-of-purchasing-and-supply-management/about/call-for-papers"
+  },
+  {
+    "publisher": "Elsevier",
+    "field": "ORG STUD",
+    "title": "Organizational Dynamics",
+    "abbreviation": "orgdyn",
+    "ajg": "3",
+    "url": "https://www.sciencedirect.com/journal/organizational-dynamics/about/call-for-papers"
+  },
+  {
+    "publisher": "Elsevier",
+    "field": "ORG STUD",
+    "title": "Research in Organizational Behavior",
+    "abbreviation": "riob",
+    "ajg": "3",
+    "url": "https://www.sciencedirect.com/journal/research-in-organizational-behavior/about/call-for-papers"
+  },
+  {
+    "publisher": "Elsevier",
+    "field": "ORG STUD",
+    "title": "Leadership Quarterly",
+    "abbreviation": "leaqua",
+    "ajg": "4",
+    "url": "https://www.sciencedirect.com/journal/leadership-quarterly/about/call-for-papers"
+  },
+  {
+    "publisher": "Emerald",
+    "field": "INFO MAN",
+    "title": "Information Technology and People",
+    "abbreviation": "itp",
+    "ajg": "3",
+    "url": "https://www.emeraldgrouppublishing.com/journal/itp"
+  },
+  {
+    "publisher": "Emerald",
+    "field": "INFO MAN",
+    "title": "Internet Research",
+    "abbreviation": "intr",
+    "ajg": "3",
+    "url": "https://www.emeraldgrouppublishing.com/journal/intr"
+  },
+  {
+    "publisher": "Emerald",
+    "field": "OPS&TECH",
+    "title": "Supply Chain Management: An International Journal",
+    "abbreviation": "scm",
+    "ajg": "3",
+    "url": "https://www.emeraldgrouppublishing.com/journal/scm"
+  },
+  {
+    "publisher": "Emerald",
+    "field": "OPS&TECH",
+    "title": "International Journal of Operations and Production Management",
+    "abbreviation": "ijopm",
+    "ajg": "4",
+    "url": "https://www.emeraldgrouppublishing.com/journal/ijopm"
+  },
+  {
+    "publisher": "Emerald",
+    "field": "ORG STUD",
+    "title": "Research in the Sociology of Organizations",
+    "abbreviation": "rso",
+    "ajg": "3",
+    "url": "https://www.emeraldgrouppublishing.com/journal/rso"
+  },
+  {
+    "publisher": "INFORMS",
+    "field": "INFO MAN",
+    "title": "Information Systems Research",
+    "abbreviation": "isr",
+    "ajg": "4*",
+    "url": "https://pubsonline.informs.org/page/calls-for-papers"
+  },
+  {
+    "publisher": "INFORMS",
+    "field": "OR&MANSCI",
+    "title": "Management Science",
+    "abbreviation": "mnsc",
+    "ajg": "4*",
+    "url": "https://pubsonline.informs.org/page/calls-for-papers"
+  },
+  {
+    "publisher": "INFORMS",
+    "field": "ORG STUD",
+    "title": "Organization Science",
+    "abbreviation": "orsc",
+    "ajg": "4*",
+    "url": "https://pubsonline.informs.org/page/calls-for-papers"
+  },
+  {
+    "publisher": "MISRC / Univ. of Minnesota",
+    "field": "INFO MAN",
+    "title": "MIS Quarterly",
+    "abbreviation": "misq",
+    "ajg": "4*",
+    "url": "https://misq.umn.edu/call-for-papers/"
+  },
+  {
+    "publisher": "Oxford University Press",
+    "field": "INFO MAN",
+    "title": "Journal of Computer-Mediated Communication",
+    "abbreviation": "jcmc",
+    "ajg": "3",
+    "url": "https://academic.oup.com/jcmc/pages/call_for_papers"
+  },
+  {
+    "publisher": "Sage",
+    "field": "INFO MAN",
+    "title": "Journal of Information Technology",
+    "abbreviation": "jit",
+    "ajg": "4",
+    "url": "https://journals.sagepub.com/home/jin"
+  },
+  {
+    "publisher": "Sage",
+    "field": "ORG STUD",
+    "title": "Group and Organization Management",
+    "abbreviation": "gom",
+    "ajg": "3",
+    "url": "https://journals.sagepub.com/home/gom"
+  },
+  {
+    "publisher": "Sage",
+    "field": "ORG STUD",
+    "title": "Organization",
+    "abbreviation": "org",
+    "ajg": "3",
+    "url": "https://journals.sagepub.com/home/org"
+  },
+  {
+    "publisher": "Sage",
+    "field": "ORG STUD",
+    "title": "Organization and Environment",
+    "abbreviation": "oae",
+    "ajg": "3",
+    "url": "https://journals.sagepub.com/home/oae"
+  },
+  {
+    "publisher": "Sage",
+    "field": "ORG STUD",
+    "title": "Human Relations",
+    "abbreviation": "hum",
+    "ajg": "4",
+    "url": "https://journals.sagepub.com/home/hum"
+  },
+  {
+    "publisher": "Sage",
+    "field": "ORG STUD",
+    "title": "Organization Studies",
+    "abbreviation": "oss",
+    "ajg": "4",
+    "url": "https://journals.sagepub.com/home/oss"
+  },
+  {
+    "publisher": "Sage",
+    "field": "ORG STUD",
+    "title": "Organizational Research Methods",
+    "abbreviation": "orm",
+    "ajg": "4",
+    "url": "https://journals.sagepub.com/home/orm"
+  },
+  {
+    "publisher": "Springer",
+    "field": "INFO MAN",
+    "title": "Information Systems Frontiers",
+    "abbreviation": "isfr",
+    "ajg": "3",
+    "url": "https://link.springer.com/journal/10796"
+  },
+  {
+    "publisher": "Taylor & Francis",
+    "field": "INFO MAN",
+    "title": "Information Society",
+    "abbreviation": "tis",
+    "ajg": "3",
+    "url": "https://www.tandfonline.com/journals/utis20"
+  },
+  {
+    "publisher": "Taylor & Francis",
+    "field": "INFO MAN",
+    "title": "European Journal of Information Systems",
+    "abbreviation": "ejis",
+    "ajg": "4",
+    "url": "https://www.tandfonline.com/journals/tjis20"
+  },
+  {
+    "publisher": "Taylor & Francis",
+    "field": "INFO MAN",
+    "title": "Journal of Management Information Systems",
+    "abbreviation": "jmis",
+    "ajg": "4",
+    "url": "https://www.tandfonline.com/journals/mmis20"
+  },
+  {
+    "publisher": "Wiley",
+    "field": "INFO MAN",
+    "title": "Information Systems Journal",
+    "abbreviation": "isj",
+    "ajg": "4",
+    "url": "https://onlinelibrary.wiley.com/page/journal/13652575/homepage/special_issues.htm"
+  },
+  {
+    "publisher": "Wiley",
+    "field": "OPS&TECH",
+    "title": "Journal of Business Logistics",
+    "abbreviation": "jbl",
+    "ajg": "3",
+    "url": "https://onlinelibrary.wiley.com/journal/jbl/homepage/specialissues"
+  },
+  {
+    "publisher": "Wiley",
+    "field": "OPS&TECH",
+    "title": "Journal of Supply Chain Management",
+    "abbreviation": "jscm",
+    "ajg": "4",
+    "url": "https://onlinelibrary.wiley.com/journal/sscm/homepage/specialissues"
+  }
 ]
