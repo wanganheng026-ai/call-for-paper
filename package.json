@@ -9,6 +9,7 @@
     "scrape": "node ./scrapers/scraper.mjs",
     "rss": "node ./scrapers/feedgen.mjs",
     "export-excel": "node ./scripts/export-excel.mjs",
+    "wechat-report": "node ./scripts/generate-wechat-report.mjs",
     "test": "node --env-file .env ./scrapers/scraper.mjs"
   },
   "repository": {
